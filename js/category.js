@@ -12,8 +12,11 @@ window.onload = function() {
 	product.startAnimate();
 
 //阻止整个页面脱拽
-	document.body.addEventListener('touchmove' , function(e){
-    	e.preventDefault();
+	document.querySelector('body').addEventListener('touchstart', function (ev) {
+		ev.preventDefault();
+	});
+	document.querySelector('body').addEventListener('touchmove', function (ev) {
+		ev.preventDefault();
 	});
 };
 /*****************************************************************************/
