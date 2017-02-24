@@ -13,24 +13,10 @@ window.onload = function() {
 
 //阻止整个页面脱拽
 	document.querySelector('body').addEventListener('touchstart', function (event) {
-		// 判断默认行为是否可以被禁用
-    	if (event.cancelable) {
-        // 判断默认行为是否已经被禁用
-        	if (!event.defaultPrevented) {
-            	event.preventDefault();
-            	// event.stopPropagation(); 
-        	}
-    	}
+		event.preventDefault();
 	});
 	document.querySelector('body').addEventListener('touchmove', function (event) {
-		// 判断默认行为是否可以被禁用
-    	if (event.cancelable) {
-        // 判断默认行为是否已经被禁用
-	        if (!event.defaultPrevented) {
-	            event.preventDefault();
-	            // event.stopPropagation(); 
-	        }
-    	}
+		event.preventDefault();
 	});
 };
 /*****************************************************************************/
