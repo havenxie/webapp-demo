@@ -18,7 +18,7 @@ window.onload = function() {
         // 判断默认行为是否已经被禁用
         	if (!event.defaultPrevented) {
             	event.preventDefault();
-            	event.stopPropagation(); 
+            	// event.stopPropagation(); 
         	}
     	}
 	});
@@ -28,7 +28,7 @@ window.onload = function() {
         // 判断默认行为是否已经被禁用
 	        if (!event.defaultPrevented) {
 	            event.preventDefault();
-	            event.stopPropagation(); 
+	            // event.stopPropagation(); 
 	        }
     	}
 	});
