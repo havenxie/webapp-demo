@@ -78,7 +78,7 @@ RollFlex.prototype = {
 		this.dynamicBox.addEventListener("touchstart", function(e) {
 			startPositionY = e.touches[0].clientY;
 			self.setTransition("0s");
-			e.preventDefault();
+			// e.preventDefault();
 	        // e.stopPropagation(); 
 		}, false);
 		this.dynamicBox.addEventListener("touchmove", function(e) {
@@ -98,7 +98,7 @@ RollFlex.prototype = {
 					markTop = self.infiniteHigh;
 				}
 			}
-			e.preventDefault();
+			// e.preventDefault();
 	        // e.stopPropagation(); 
 
 		}, false);
