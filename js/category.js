@@ -11,6 +11,9 @@ window.onload = function() {
 	var product = new RollFlex(".containerRight", ".jd-content", 100, false);
 	product.startAnimate();
 
+	document.body.addEventListener('touchmove' , function(e){
+    	e.preventDefault();
+	});//阻止整个页面脱拽
 };
 /*****************************************************************************/
 /**
@@ -76,7 +79,7 @@ RollFlex.prototype = {
 				}
 			}
 			event.stopPropagation();
-			
+
 		}, false);
 		this.dynamicBox.addEventListener("touchend", function(e) {
 			if (!endPositionY) { //只是点击并未拖拽
