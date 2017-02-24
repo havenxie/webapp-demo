@@ -2,6 +2,7 @@
  * [onload description]
  * @return {[type]} [description]
  * 2016.12.31
+ * todo：阻止事件冒泡
  */
 window.onload = function() {
 	var rollMenu = new RollFlex(".jd-cateLeft", ".dynamicLeft", 100, true);
@@ -74,6 +75,8 @@ RollFlex.prototype = {
 					markTop = self.infiniteHigh;
 				}
 			}
+			event.stopPropagation();
+			
 		}, false);
 		this.dynamicBox.addEventListener("touchend", function(e) {
 			if (!endPositionY) { //只是点击并未拖拽
