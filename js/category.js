@@ -79,7 +79,7 @@ RollFlex.prototype = {
 			startPositionY = e.touches[0].clientY;
 			self.setTransition("0s");
 			e.preventDefault();
-	        e.stopPropagation(); 
+	        // e.stopPropagation(); 
 		}, false);
 		this.dynamicBox.addEventListener("touchmove", function(e) {
 			endPositionY = e.touches[0].clientY;
@@ -99,7 +99,7 @@ RollFlex.prototype = {
 				}
 			}
 			e.preventDefault();
-	        e.stopPropagation(); 
+	        // e.stopPropagation(); 
 
 		}, false);
 		this.dynamicBox.addEventListener("touchend", function(e) {
