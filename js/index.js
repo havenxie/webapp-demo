@@ -118,7 +118,7 @@ Carrousel.prototype = {
 				return false;
 			}
 			remainTime = (self.width - Math.abs(dragDistance)) / self.width; //尽量在这里不要转换成字符串 因为内次都要开辟空间 占内存
-			if (Math.abs(dragDistance) < self.width * 2 / 5) { //拖动距离不够的情况下就返回去
+			if (Math.abs(dragDistance) < self.width * 2 / 7) { //拖动距离不够的情况下就返回去
 				self.setTransition(1 - remainTime + "s");
 			} else if (dragDistance > 0) { //向右拖动
 				self.index--;
@@ -167,7 +167,7 @@ Carrousel.prototype = {
 			self.index++;
 			self.setTransition("1s");
 			self.setTransform(-self.index * self.width);
-		}, 3000);
+		}, 5000);
 	},
 	startAnimate: function() {
 		this.bindResize();
