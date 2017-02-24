@@ -1,0 +1,379 @@
+.jd_topBar {
+	position: static;
+}
+.jd_topBar h2 {
+	width: 100%;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #000;
+	font-weight: inherit;
+}
+
+/* 安全购物提示开始*/
+.jd_safeTipe {
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	font-size: 13px;
+	text-align: center;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+.jd_safeTipe p {
+	padding-left: 25px;
+	width: 240px;
+	display: inline-block;/*父元素设置了text-align:center;这里设置为inline-block就可以水平居中了*/
+	position: relative;
+}
+.jd_safeTipe p:before {
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: url("../images/safe_icon.png") no-repeat;
+	background-size: 18px 18px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+/* 安全购物提示结束*/
+
+/* 公共复选框开始*/
+.check_box {
+	height: 20px;
+	width: 20px;
+	display: block;
+	background: url("../images/shop-icon.png") no-repeat;
+	background-size: 50px 100px;
+	background-position: 0 0;
+}
+.check_box[checked] {
+	background-position: -25px 0;
+}
+
+/* 公共复选框结束*/
+
+/* 店铺标题开始 */
+.jd_shop {
+	margin-top: 10px;
+	background-color: #fff;
+}
+.jd_shop .jd_shop_name {
+	height: 36px;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+}
+.jd_shop .jd_shop_name .shop_check {
+	width: 40px;
+	height: 36px;	/* position: relative; */
+
+	/*本来可以用这个，但是他不会脱离文档流仍然会占据一行*/
+	position: absolute;
+}
+.jd_shop .jd_shop_name .shop_check .check_box {
+	position: absolute;
+	top: 7px;
+	left: 10px;
+}
+.jd_shop .jd_shop_name .shop_title {
+	padding-left: 40px;
+	font-size: 12px;
+}
+.jd_shop .jd_shop_name .shop_title .shop_title_logo {
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin-top: 8px;
+}
+.jd_shop .jd_shop_name .shop_title .shop_title_name {
+	float: left;/*行内元素无法设置上下margin因此要浮动*/
+	font-size: 13px;
+	margin-top: 8px;
+	margin-left: 4px;
+}
+.jd_shop .jd_shop_name .shop_title .shop_title_desc {
+	float: right;
+	color: #d8505c;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+
+/* 店铺标题结束 */
+
+/* 店铺主体开始 */
+.jd_shop .jd_shop_product {
+	border-bottom: 1px solid #e0e0e0;
+	position: relative;
+}
+.jd_shop .jd_shop_product .product_check {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.jd_shop .jd_shop_product .product_check .check_box {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.jd_shop .jd_shop_product .product_info {
+	margin-top: 10px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.jd_shop .jd_shop_product .product_info .info_img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+	display: block;
+}
+.jd_shop .jd_shop_product .product_info .info_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.jd_shop .jd_shop_product .product_info .info_box {
+	padding-left: 90px;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_desc {
+	height: 30px;
+	line-height: 15px;
+	font-size: 13px;
+	overflow: hidden;
+	display: block;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_price {
+	margin-top: 5px;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option {
+	height: 24px;
+	margin-top: 5px;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .num_box {
+	float: left;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .num_box .num_box_sub {
+	width: 32px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #e0e0e0;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .num_box input {
+	width: 32px;
+	height: 24px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	float: left;
+	text-align: center;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .num_box .num_box_add {
+	width: 32px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #e0e0e0;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .info_delete {
+	float: right;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .info_delete .delete_box_top {
+	width: 20px;
+	height: 5px;
+	background: url("../images/delete_up.png") no-repeat;
+	background-size: 20px 5px;
+	margin-left: -1px;
+}
+.jd_shop .jd_shop_product .product_info .info_box .info_option .info_delete .delete_box_bot {
+	width: 18px;
+	height: 18px;
+	background: url("../images/delete_down.png") no-repeat;
+	background-size: 18px 18px;
+	margin-top: -3px;
+}
+
+/* 店铺主体结束 */
+
+/* 结算部分开始 */
+.jd_amount {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 62px;
+	background-color: rgba(0, 0, 0, .8);
+	width: 100%;
+}
+.jd_amount .amount_check {
+	float: left;
+	width: 80px;
+	line-height: 62px;
+	position: relative;
+}
+.jd_amount .amount_check .check_box {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.jd_amount .amount_check span {
+	padding-left: 35px;
+	color: #fff;
+}
+.jd_amount .amount_info {
+	padding-left: 80px;
+	padding-right: 80px;
+	height: 62px;
+	color: #fff;
+}
+.jd_amount .amount_info .sum {
+	font-size: 16px;
+	margin-top: 15px;
+}
+.jd_amount .amount_info .other {
+	font-size: 10px;
+	margin-top: 5px;
+}
+.jd_amount .amount_submit {
+	height: 62px;
+	width: 120px;
+	padding: 0 2px;
+	text-align: center;
+	line-height: 62px;
+	color: #fff;
+	background-color: #d8505c;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.jd_amount .amount_submit span {
+	font-size: 12px;
+}
+
+/* 结算部分结束 */
+
+/* 遮罩层开始 */
+
+/*<div class="jd_shadow">
+ 	<div class="jd_shadow_box">
+<div class="shadow_box_title">
+您确定删除这件商品吗？
+</div>
+<div class="shadow_box_con">
+<a class="cancel">取消</a>
+<a class="submit">确定</a>
+</div>
+</div>
+</div> */
+.jd_shadow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+.jd_shadow .jd_shadow_box {
+	width: 80%;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-right: 4px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+.jd_shadow .jd_shadow_box .shadow_box_title {
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+	line-height: 75px;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 10px;
+}
+.jd_shadow .jd_shadow_box .shadow_box_con {
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.jd_shadow .jd_shadow_box .shadow_box_con .cancel, .jd_shadow .jd_shadow_box .shadow_box_con .submit {
+	width: 45%;
+	height: 36px;
+	float: left;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	color: #888;
+	text-align: center;
+	line-height: 36px;
+}
+.jd_shadow .jd_shadow_box .shadow_box_con .cancel {
+	margin-right: 10%;
+}
+.jd_shadow .jd_shadow_box .shadow_box_con .submit {
+	background-color: #f15353;
+}
+
+/* 遮罩层结束 */
+
+/* 动画部分开始 */
+.bounceInDown {
+	animation-name: bounceInDown;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+@keyframes bounceInDown {
+	0%, 100%, 60%, 75%, 90% {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0px, -3000px, 0px);
+		-moz-transform: translate3d(0px, -3000px, 0px);
+		-ms-transform: translate3d(0px, -3000px, 0px);
+		-o-transform: translate3d(0px, -3000px, 0px);
+		transform: translate3d(0px, -3000px, 0px);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 25px, 0px);
+		-moz-transform: translate3d(0px, 25px, 0px);
+		-ms-transform: translate3d(0px, 25px, 0px);
+		-o-transform: translate3d(0px, 25px, 0px);
+		transform: translate3d(0px, 25px, 0px);
+	}
+	75% {
+		-webkit-transform: translate3d(0px, -10px, 0px);
+		-moz-transform: translate3d(0px, -10px, 0px);
+		-ms-transform: translate3d(0px, -10px, 0px);
+		-o-transform: translate3d(0px, -10px, 0px);
+		transform: translate3d(0px, -10px, 0px);
+	}
+	90% {
+		-webkit-transform: translate3d(0px, 5px, 0px);
+		-moz-transform: translate3d(0px, 5px, 0px);
+		-ms-transform: translate3d(0px, 5px, 0px);
+		-o-transform: translate3d(0px, 5px, 0px);
+		transform: translate3d(0px, 5px, 0px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+}
+
+/* 动画部分结束 */

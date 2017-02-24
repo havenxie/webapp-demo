@@ -1,0 +1,292 @@
+/*搜索栏开始*/
+.jd_header {
+	width: 100%;/*因为脱离标准流 其宽度相当于浏览器宽度*/
+	height: 40px;
+	position: fixed;/*fixed相对浏览器固定定位，脱离标准流动*/
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.jd_header .jd-headerbox {
+	min-width: 300px;/*重新设置最小宽度*/
+	max-width: 640px;/*重新设置最大宽度*/
+	margin: 0 auto;
+	background: rgba(201, 21, 35, 0);
+	position: relative;
+}
+
+/*因为在缩放的时候logo和登录的不能改变大小，所以不应该受到
+父级宽度影响 因此要脱离标准文档流*/
+.jd_header .jd-headerbox .icon-logo, .jd_header .jd-headerbox .icon-back {
+	background-position: 0 -103px;/*图片在base里面已经设置了压缩*/
+	width: 60px;
+	height: 36px;
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 5px;
+}
+.jd_header .jd-headerbox .login {
+	display: block;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 15px;
+	color: #fff;
+}
+.jd_header .jd-headerbox form {
+	width: 100%;/*应该是jd-headerbox的宽度*/
+	height: 40px;
+	padding-left: 70px;
+	padding-right: 50px;
+	position: relative;
+}
+.jd_header .jd-headerbox form .icon-search {
+	background-position: -60px -109px;
+	height: 20px;
+	width: 20px;
+	display: block;/*不转成块级元素就无法设置宽高就无法显示背景，
+													但是一旦转成块级元素就会占有整行，因此又要脱离文档流*/
+	position: absolute;
+	left: 80px;
+	top: 10px;
+}
+.jd_header .jd-headerbox form input {
+	width: 100%;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 30px;
+	margin-top: 5px;
+}
+
+/*搜索栏结束*/
+
+/*轮播图开始*/
+#jd_banner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#jd_banner ul:first-child {
+	width: 1000%;
+	-webkit-transform: translatex(-10%);
+	transform: translatex(-10%);
+}
+#jd_banner ul:first-child li {
+	float: left;
+	width: 10%;	/*z-index: 999;*/
+}
+#jd_banner ul:first-child li img {
+	width: 100%;
+}
+#jd_banner ul:last-child {
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	width: 118px;
+	margin-left: -59px;
+}
+#jd_banner ul:last-child li {
+	float: left;
+	width: 6px;
+	height: 6px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	margin-left: 10px;/*margin不算自己的宽度 但是算在父级内*/
+}
+#jd_banner ul:last-child li:first-child {
+	margin-left: 0;
+}
+#jd_banner ul:last-child li.now {
+	background-color: #fff;
+}
+
+/*京东轮播图结束*/
+
+/*京东导航栏开始*/
+#jd_nav {
+	background-color: #fff;
+	border-bottom: 1px solid #ebebeb;
+	padding-top: 12px;
+}
+#jd_nav ul {
+	height: 138px;
+	padding: 0 3.125%;
+}
+#jd_nav ul li {
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+#jd_nav ul li a {
+}
+#jd_nav ul li a img {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 8px;
+}
+#jd_nav ul li a p {
+	font-size: 12px;
+	line-height: 12px;
+	color: #5d5d5d;
+	margin-bottom: 8px;
+}
+
+/*京东导航栏结束*/
+
+/*京东产品开始*/
+
+/*京东产品公共样式*/
+#jd_product {
+	padding: 0 5px;
+	margin-top: 8px;
+}
+#jd_product .jd-areabox {
+	background-color: #fff;
+	margin-bottom: 8px;
+	box-shadow: 0 0 1px 1px #ebebeb;
+}
+#jd_product .jd-areabox .jd-areabox-top {
+	height: 32px;
+	line-height: 32px;
+}
+#jd_product .jd-areabox .jd-areabox-top .title {
+	color: #666;
+	font-size: 14px;
+	padding-left: 15px;
+	font-weight: inherit;/*继承父级*/
+	position: relative;
+}
+#jd_product .jd-areabox .jd-areabox-top .title::before {
+	content: "";
+	height: 12px;
+	width: 3px;
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 7px;
+	background-color: #d8505c;
+}
+#jd_product .jd-areabox .jd-areabox-bot {
+	border-top: 1px solid #ebebeb;
+}
+#jd_product .jd-areabox .jd-areabox-bot.no-bor-top {
+	border-top: 0;
+}
+
+/*京东产品公共样式结束*/
+
+/*秒杀开始*/
+.jd-secondkill .jd-areabox-top .sk-left {
+	float: left;
+}
+.jd-secondkill .jd-areabox-top .sk-left .icon-kill {
+	width: 16px;
+	height: 20px;
+	display: block;
+	background: url("../images/seckill-icon.png") no-repeat;
+	-webkit-background-size: 16px 20px;
+	background-size: 16px 20px;
+	margin-left: 5px;
+	margin-top: 6px;
+	float: left;
+}
+.jd-secondkill .jd-areabox-top .sk-left h4 {
+	font-weight: inherit;
+	color: #c91523;
+	font-size: 15px;
+	margin-left: 5px;
+	float: left;
+}
+.jd-secondkill .jd-areabox-top .sk-left .sk-time {
+	float: left;
+	margin-left: 5px;
+}
+.jd-secondkill .jd-areabox-top .sk-left .sk-time .num {
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #333;	/*span不能设置宽高 需要转换成块级元素 
+															但是块级元素占据一行，故转成inline-*/
+	display: inline-block;
+	margin-top: 8px;
+}
+.jd-secondkill .jd-areabox-top .sk-right {
+	float: right;
+	margin-right: 5px;
+}
+
+/*<li>
+<div class="imgbox">
+<img src="images/seckill_1.jpg">
+</div>
+<p class="new_price">&yen;12.12</p>
+<p class="old_price">&yen;26.90</p>
+</li>*/
+.jd-secondkill .jd-areabox-bot {
+}
+.jd-secondkill .jd-areabox-bot ul li {
+	width: 33.33%;
+	text-align: center;
+	float: left;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+.jd-secondkill .jd-areabox-bot ul li .imgbox {
+	border-right: 1px solid #dcdcdc;
+	width: 100%;
+	margin-top: 10px;
+}
+.jd-secondkill .jd-areabox-bot ul li:last-child .imgbox {
+	border-right: 0;
+}
+.jd-secondkill .jd-areabox-bot ul li .imgbox img {
+	width: 64%;
+}
+.jd-secondkill .jd-areabox-bot ul li .new-price {
+	color: #d8505c;
+	font-style: 14px;
+	line-height: 20px;
+}
+.jd-secondkill .jd-areabox-bot ul li .old-price {
+	color: #666;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration: line-through;/*中划线*/
+}
+.jd-bigbox {
+	padding: 5px;
+}
+.jd-bigbox img {
+	width: 100%;
+}
+.f-left {
+	float: left;
+	width: 50%;
+}
+.f-right {
+	float: right;
+	width: 50%;
+}
+.border-right {
+	border-right: 1px solid #ebebeb;
+}
+.border-bottom {
+	border-bottom: 1px solid #ebebeb;
+}
+.border-left {
+	border-left: 1px solid #ebebeb;
+}
+.f-left img {
+	width: 100%;
+}
+.f-right img {
+	width: 100%;
+}
+/*京东产品结束
