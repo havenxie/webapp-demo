@@ -12,11 +12,25 @@ window.onload = function() {
 	product.startAnimate();
 
 //阻止整个页面脱拽
-	document.querySelector('body').addEventListener('touchstart', function (ev) {
-		ev.preventDefault();
+	document.querySelector('body').addEventListener('touchstart', function (event) {
+		// 判断默认行为是否可以被禁用
+    	if (event.cancelable) {
+        // 判断默认行为是否已经被禁用
+        	if (!event.defaultPrevented) {
+            	event.preventDefault();
+            	event.stopPropagation(); 
+        	}
+    	}
 	});
-	document.querySelector('body').addEventListener('touchmove', function (ev) {
-		ev.preventDefault();
+	document.querySelector('body').addEventListener('touchmove', function (event) {
+		// 判断默认行为是否可以被禁用
+    	if (event.cancelable) {
+        // 判断默认行为是否已经被禁用
+	        if (!event.defaultPrevented) {
+	            event.preventDefault();
+	            event.stopPropagation(); 
+	        }
+    	}
 	});
 };
 /*****************************************************************************/
@@ -64,6 +78,8 @@ RollFlex.prototype = {
 		this.dynamicBox.addEventListener("touchstart", function(e) {
 			startPositionY = e.touches[0].clientY;
 			self.setTransition("0s");
+			e.preventDefault();
+	        e.stopPropagation(); 
 		}, false);
 		this.dynamicBox.addEventListener("touchmove", function(e) {
 			endPositionY = e.touches[0].clientY;
@@ -82,7 +98,8 @@ RollFlex.prototype = {
 					markTop = self.infiniteHigh;
 				}
 			}
-			event.stopPropagation();
+			e.preventDefault();
+	        e.stopPropagation(); 
 
 		}, false);
 		this.dynamicBox.addEventListener("touchend", function(e) {
