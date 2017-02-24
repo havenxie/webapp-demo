@@ -12,12 +12,12 @@ window.onload = function() {
 	product.startAnimate();
 
 //阻止整个页面脱拽
-	document.querySelector('body').addEventListener('touchstart', function (event) {
+/*	document.querySelector('body').addEventListener('touchstart', function (event) {
 		event.preventDefault();
 	});
 	document.querySelector('body').addEventListener('touchmove', function (event) {
 		event.preventDefault();
-	});
+	});*/
 };
 /*****************************************************************************/
 /**
