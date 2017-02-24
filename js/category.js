@@ -11,9 +11,10 @@ window.onload = function() {
 	var product = new RollFlex(".containerRight", ".jd-content", 100, false);
 	product.startAnimate();
 
+//阻止整个页面脱拽
 	document.body.addEventListener('touchmove' , function(e){
     	e.preventDefault();
-	});//阻止整个页面脱拽
+	});
 };
 /*****************************************************************************/
 /**
