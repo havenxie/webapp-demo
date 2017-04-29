@@ -6,3 +6,9 @@
 
 
 <img src="url.png" width = "140" height = "140" alt="url二维码" />
+
+
+## 许可
+
+[MIT](./LICENSE) &copy; [havenxie](http://github.com/havenxie)
+
